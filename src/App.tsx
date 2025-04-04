@@ -2,12 +2,14 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import AboutMe from "./components/TextWithImage";
 
 function App() {
   return (
     <Grid
       templateAreas={`"nav"
                   "hero"
+                  "aboutme"
                   "skills"
                   "projects"
                   "experience"
@@ -15,9 +17,9 @@ function App() {
                   "footer"`}
       gridTemplateRows={"auto auto auto auto auto auto auto"}
       gridTemplateColumns={"1fr"}
-      gap={6}
+      gap={10}
       py={3}
-      mx={{ base: "20px", xl: "250px" }}
+      mx={{ base: "20px", xl: "350px" }}
     >
       {/* Header */}
       <GridItem area="nav">
@@ -27,6 +29,11 @@ function App() {
       {/* Hero Section */}
       <GridItem area="hero">
         <Hero></Hero>
+      </GridItem>
+
+      {/* Skills Section */}
+      <GridItem area="aboutme">
+        <AboutMe />
       </GridItem>
 
       {/* Skills Section */}

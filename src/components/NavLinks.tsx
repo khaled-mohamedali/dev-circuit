@@ -5,7 +5,7 @@ const NavLinks = () => {
     <HStack
       gap="80px"
       display={{ base: "none", md: "flex" }}
-      marginRight={{ xl: "80px" }}
+      // marginRight={{ xl: "80px" }}
     >
       <Link>Home</Link>
       <Link>Projects</Link>

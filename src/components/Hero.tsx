@@ -4,21 +4,16 @@ const Hero = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} gap={10} alignItems="center">
       <Box>
-        <Heading fontFamily="Tektur" size="4xl">
+        <Heading fontFamily="Tektur" size={{ base: "3xl", xl: "5xl" }}>
           Innovative Approaches in Software Development and Robotics
         </Heading>
-        <Text fontFamily="Montserrat">
+        <Text fontFamily="Montserrat" fontSize={{ lg: "2xl" }}>
           Welcome to my portfolio! As a passionate software developer and AI
           engineer, I specialize in creating intelligent systems and embedded
           solutions that drive innovation.
         </Text>
       </Box>
-      <Image
-        src={image_1}
-        borderRadius="20px"
-        h={{ xl: "90%" }}
-        w={{ xl: "90%" }}
-      ></Image>
+      <Image src={image_1} borderRadius="20px"></Image>
     </SimpleGrid>
   );
 };
