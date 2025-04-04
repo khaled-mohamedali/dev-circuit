@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/TextWithImage";
+import ExperienceGrid from "./components/ExperienceGrid";
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
       templateAreas={`"nav"
                   "hero"
                   "aboutme"
-                  "skills"
-                  "projects"
                   "experience"
+                  "projects"
+                  "skills"
                   "contact"
                   "footer"`}
       gridTemplateRows={"auto auto auto auto auto auto auto"}
@@ -36,14 +37,16 @@ function App() {
         <AboutMe />
       </GridItem>
 
+      {/* Experience Section */}
+      <GridItem area="experience">
+        <ExperienceGrid></ExperienceGrid>
+      </GridItem>
+
       {/* Skills Section */}
       <GridItem area="skills">Skills</GridItem>
 
       {/* Projects Section */}
       <GridItem area="projects">Projects</GridItem>
-
-      {/* Experience Section */}
-      <GridItem area="experience">Experience</GridItem>
 
       {/* Contact Section */}
       <GridItem area="contact">Contact</GridItem>

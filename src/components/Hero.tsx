@@ -4,10 +4,10 @@ const Hero = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} gap={10} alignItems="center">
       <Box>
-        <Heading fontFamily="Tektur" size={{ base: "3xl", xl: "5xl" }}>
+        <Heading fontFamily="Tektur" size={{ base: "3xl", xl: "4xl" }}>
           Innovative Approaches in Software Development and Robotics
         </Heading>
-        <Text fontFamily="Montserrat" fontSize={{ lg: "2xl" }}>
+        <Text fontFamily="Montserrat" fontSize={{ lg: "xl" }}>
           Welcome to my portfolio! As a passionate software developer and AI
           engineer, I specialize in creating intelligent systems and embedded
           solutions that drive innovation.
