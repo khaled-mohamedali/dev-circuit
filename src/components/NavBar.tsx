@@ -1,5 +1,7 @@
-import { Box, HStack, Image, Link } from "@chakra-ui/react";
+import { Box, HStack, Image } from "@chakra-ui/react";
 import Logo from "../assets/logo.svg";
+import MobileMenu from "./MobileMenu";
+import NavLinks from "./NavLinks";
 
 const NavBar = () => {
   return (
@@ -7,11 +9,10 @@ const NavBar = () => {
       <Box width="150px">
         <Image src={Logo}></Image>
       </Box>
-      <HStack gap="80px" marginRight={5}>
-        <Link>Home</Link>
-        <Link>Projects</Link>
-        <Link>Contact</Link>
-      </HStack>
+      <NavLinks />
+      <Box display={{ base: "flex", md: "none" }}>
+        <MobileMenu />
+      </Box>
     </HStack>
   );
 };

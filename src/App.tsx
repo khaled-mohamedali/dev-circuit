@@ -15,7 +15,8 @@ function App() {
       gridTemplateRows={"auto auto auto auto auto auto auto"}
       gridTemplateColumns={"1fr"}
       gap={6}
-      p={4}
+      py={3}
+      px={5}
     >
       {/* Header */}
       <GridItem area="nav">
