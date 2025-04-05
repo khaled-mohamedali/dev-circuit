@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/TextWithImage";
 import ExperienceGrid from "./components/ExperienceGrid";
+import ProjectGrid from "./components/ProjectGrid";
 
 function App() {
   return (
@@ -39,14 +40,16 @@ function App() {
 
       {/* Experience Section */}
       <GridItem area="experience">
-        <ExperienceGrid></ExperienceGrid>
+        <ExperienceGrid />
+      </GridItem>
+
+      {/* Projects Section */}
+      <GridItem area="projects">
+        <ProjectGrid />
       </GridItem>
 
       {/* Skills Section */}
       <GridItem area="skills">Skills</GridItem>
-
-      {/* Projects Section */}
-      <GridItem area="projects">Projects</GridItem>
 
       {/* Contact Section */}
       <GridItem area="contact">Contact</GridItem>

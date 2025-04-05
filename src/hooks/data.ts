@@ -1,7 +1,15 @@
+import img from "../assets/taskM.jpeg";
 export interface Experience {
   id: number;
   title: string;
   text: string;
+}
+
+export interface Project {
+  id: number;
+  title: string;
+  img_url: string;
+  list_bagdes: string[];
 }
 
 export const experiences: Experience[] = [
@@ -39,5 +47,14 @@ enabling efficient storage and retrieval of
 large datasets. Collaborated with
 researchers to build scalable and
 interactive tools for data analysis.`,
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "Smart Home",
+    img_url: img,
+    list_bagdes: ["React", "TypeScript"],
   },
 ];
