@@ -6,7 +6,10 @@ const ExperienceGrid = () => {
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }}>
       {experiences.map((experience) => (
-        <ExperienceCard experience={experience}></ExperienceCard>
+        <ExperienceCard
+          key={experience.id}
+          experience={experience}
+        ></ExperienceCard>
       ))}
     </SimpleGrid>
   );

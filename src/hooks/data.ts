@@ -1,4 +1,15 @@
-import img from "../assets/taskM.jpeg";
+import { Badge } from "@chakra-ui/react";
+import { IconType } from "react-icons";
+import { DiPostgresql } from "react-icons/di";
+import { FaAws, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
+import {
+  SiDjango,
+  SiDocker,
+  SiMongodb,
+  SiTensorflow,
+  SiTypescript,
+} from "react-icons/si";
+
 export interface Experience {
   id: number;
   title: string;
@@ -9,7 +20,12 @@ export interface Project {
   id: number;
   title: string;
   img_url: string;
-  list_bagdes: string[];
+  list_bagdes: Badge[];
+}
+
+interface Badge {
+  name: string;
+  Icon: IconType;
 }
 
 export const experiences: Experience[] = [
@@ -53,8 +69,58 @@ interactive tools for data analysis.`,
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Smart Home",
-    img_url: img,
-    list_bagdes: ["React", "TypeScript"],
+    title: "E-Commerce Platform",
+    img_url: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a",
+    list_bagdes: [
+      { name: "React", Icon: FaReact },
+      { name: "Node.js", Icon: FaNodeJs },
+      { name: "MongoDB", Icon: SiMongodb },
+      { name: "AWS", Icon: FaAws },
+      { name: "Python", Icon: FaPython },
+      { name: "TensorFlow", Icon: SiTensorflow },
+      { name: "Docker", Icon: SiDocker },
+    ],
+  },
+  {
+    id: 2,
+    title: "AI Research Dashboard",
+    img_url: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485",
+    list_bagdes: [
+      { name: "Python", Icon: FaPython },
+      { name: "TensorFlow", Icon: SiTensorflow },
+      { name: "Docker", Icon: SiDocker },
+    ],
+  },
+  {
+    id: 3,
+    title: "Social Media Analytics",
+    img_url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    list_bagdes: [
+      { name: "TypeScript", Icon: SiTypescript },
+      { name: "Django", Icon: SiDjango },
+      { name: "PostgreSQL", Icon: DiPostgresql },
+    ],
+  },
+  {
+    id: 4,
+    title: "IoT Monitoring System",
+    img_url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    list_bagdes: [
+      { name: "React", Icon: FaReact },
+      { name: "Node.js", Icon: FaNodeJs },
+      { name: "Python", Icon: FaPython },
+      { name: "Docker", Icon: SiDocker },
+    ],
+  },
+  {
+    id: 5,
+    title: "IoT Monitoring System",
+    img_url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    list_bagdes: [
+      { name: "React", Icon: FaReact },
+      { name: "Node.js", Icon: FaNodeJs },
+      { name: "Python", Icon: FaPython },
+      { name: "Docker", Icon: SiDocker },
+    ],
   },
 ];
