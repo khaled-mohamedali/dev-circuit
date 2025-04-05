@@ -20,6 +20,8 @@ export interface Project {
   id: number;
   title: string;
   img_url: string;
+  git: boolean;
+  demo?: boolean;
   list_bagdes: Badge[];
 }
 
@@ -71,6 +73,8 @@ export const projects: Project[] = [
     id: 1,
     title: "E-Commerce Platform",
     img_url: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a",
+    git: true,
+    demo: true,
     list_bagdes: [
       { name: "React", Icon: FaReact },
       { name: "Node.js", Icon: FaNodeJs },
@@ -85,6 +89,8 @@ export const projects: Project[] = [
     id: 2,
     title: "AI Research Dashboard",
     img_url: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485",
+    git: false,
+    demo: true,
     list_bagdes: [
       { name: "Python", Icon: FaPython },
       { name: "TensorFlow", Icon: SiTensorflow },
@@ -95,6 +101,8 @@ export const projects: Project[] = [
     id: 3,
     title: "Social Media Analytics",
     img_url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    git: true,
+    demo: false,
     list_bagdes: [
       { name: "TypeScript", Icon: SiTypescript },
       { name: "Django", Icon: SiDjango },
@@ -105,6 +113,8 @@ export const projects: Project[] = [
     id: 4,
     title: "IoT Monitoring System",
     img_url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    git: false,
+
     list_bagdes: [
       { name: "React", Icon: FaReact },
       { name: "Node.js", Icon: FaNodeJs },
@@ -116,6 +126,7 @@ export const projects: Project[] = [
     id: 5,
     title: "IoT Monitoring System",
     img_url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    git: true,
     list_bagdes: [
       { name: "React", Icon: FaReact },
       { name: "Node.js", Icon: FaNodeJs },

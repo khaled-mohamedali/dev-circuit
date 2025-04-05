@@ -8,8 +8,8 @@ interface Props {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <Card.Root width={"310px"}>
-      <Card.Body>
+    <Card.Root>
+      <Card.Body gap="3">
         <Avatar.Root size="lg" shape="rounded" bgColor={"whiteAlpha.100"}>
           <Avatar.Image src={experienceLogo} />
           <Avatar.Fallback name="Nue Camp" />
