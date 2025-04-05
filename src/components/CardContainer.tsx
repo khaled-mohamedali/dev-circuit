@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface Props {
   children: ReactNode;
 }
-const ProjectCardContainer = ({ children }: Props) => {
+const CardContainer = ({ children }: Props) => {
   return (
     <Box borderRadius={10} overflow={"hidden"}>
       {children}
@@ -11,4 +11,4 @@ const ProjectCardContainer = ({ children }: Props) => {
   );
 };
 
-export default ProjectCardContainer;
+export default CardContainer;
