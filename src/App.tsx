@@ -18,6 +18,7 @@ import { FaMobile } from "react-icons/fa6";
 import { BsCpuFill } from "react-icons/bs";
 import { IoLogoGameControllerB } from "react-icons/io";
 import Ai from "./components/Ai";
+import Line from "./components/Line";
 
 function App() {
   return (
@@ -53,16 +54,22 @@ function App() {
 
       {/* Experience Section */}
       <GridItem area="experience">
+        <VStack p={5} gap={5}>
+          <Heading fontFamily={"Tektur"} fontSize={"2xl"} textAlign={"center"}>
+            My Journey So Far as Software Dev
+          </Heading>
+          <Line width={200} color="purple.400" />
+        </VStack>
         <ExperienceGrid />
       </GridItem>
 
       {/* Projects Section */}
       <GridItem area="projects">
-        <VStack py={10}>
+        <VStack p={5} gap={5}>
           <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
             Featured Projects
           </Heading>
-          <Box bg={"green.500"} h={"5px"} w={"200px"}></Box>
+          <Line width={200} color="green.500" />
           <HStack>
             <Button
               variant={"outline"}
