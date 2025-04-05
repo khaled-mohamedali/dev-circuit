@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Grid,
   GridItem,
@@ -7,18 +6,19 @@ import {
   HStack,
   VStack,
 } from "@chakra-ui/react";
-import "./App.css";
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import AboutMe from "./components/TextWithImage";
-import ExperienceGrid from "./components/ExperienceGrid";
-import ProjectGrid from "./components/ProjectGrid";
+import { BsCpuFill } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
 import { FaMobile } from "react-icons/fa6";
-import { BsCpuFill } from "react-icons/bs";
 import { IoLogoGameControllerB } from "react-icons/io";
+import "./App.css";
 import Ai from "./components/Ai";
+import ExperienceGrid from "./components/ExperienceGrid";
+import Hero from "./components/Hero";
 import Line from "./components/Line";
+import NavBar from "./components/NavBar";
+import ProjectGrid from "./components/ProjectGrid";
+import AboutMe from "./components/TextWithImage";
+import AnimatedIcons from "./components/AnimatedIcons";
 
 function App() {
   return (
@@ -109,7 +109,15 @@ function App() {
       </GridItem>
 
       {/* Skills Section */}
-      <GridItem area="skills">Skills</GridItem>
+      <GridItem area="skills">
+        <VStack p={5} gap={5}>
+          <Heading fontFamily={"Tektur"} fontSize={"2xl"} textAlign={"center"}>
+            Technical Expertise
+          </Heading>
+          <Line width={200} color="cyan.400" />
+        </VStack>
+        <AnimatedIcons></AnimatedIcons>
+      </GridItem>
 
       {/* Contact Section */}
       <GridItem area="contact">Contact</GridItem>

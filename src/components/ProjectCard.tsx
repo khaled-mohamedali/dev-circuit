@@ -2,6 +2,7 @@ import { Project } from "@/hooks/data";
 import { Badge, Button, Card, Flex, Image } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa6";
+import { colorPalette } from "@/hooks/data";
 
 // interface Props {
 //   project: Project;
@@ -12,18 +13,6 @@ interface Props {
 }
 
 const ProjectCard = ({ project }: Props) => {
-  const colorPalette = [
-    "gray",
-    "red",
-    "pink",
-    "purple",
-    "cyan",
-    "blue",
-    "teal",
-    "green",
-    "yellow",
-    "orange",
-  ];
   return (
     <Card.Root
       boxShadow="lg"

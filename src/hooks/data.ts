@@ -30,6 +30,10 @@ interface Badge {
   Icon: IconType;
 }
 
+export interface Skill {
+  id: number;
+  component: IconType;
+}
 export const experiences: Experience[] = [
   {
     id: 1,
@@ -134,4 +138,17 @@ export const projects: Project[] = [
       { name: "Docker", Icon: SiDocker },
     ],
   },
+];
+
+export const colorPalette = [
+  "gray",
+  "red",
+  "pink",
+  "purple",
+  "cyan",
+  "blue",
+  "teal",
+  "green",
+  "yellow",
+  "orange",
 ];
