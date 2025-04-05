@@ -1,10 +1,23 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Grid,
+  GridItem,
+  Heading,
+  HStack,
+  VStack,
+} from "@chakra-ui/react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/TextWithImage";
 import ExperienceGrid from "./components/ExperienceGrid";
 import ProjectGrid from "./components/ProjectGrid";
+import { FaGlobe } from "react-icons/fa";
+import { FaMobile } from "react-icons/fa6";
+import { BsCpuFill } from "react-icons/bs";
+import { IoLogoGameControllerB } from "react-icons/io";
+import Ai from "./components/Ai";
 
 function App() {
   return (
@@ -45,6 +58,46 @@ function App() {
 
       {/* Projects Section */}
       <GridItem area="projects">
+        <VStack py={10}>
+          <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
+            Featured Projects
+          </Heading>
+          <Box bg={"green.500"} h={"5px"} w={"200px"}></Box>
+          <HStack>
+            <Button
+              variant={"outline"}
+              borderRadius={"full"}
+              colorPalette={"green"}
+            >
+              {" "}
+              All Projects
+            </Button>
+            <Button variant={"outline"} borderRadius={"full"}>
+              {" "}
+              <FaMobile />
+              Mobile App
+            </Button>
+            <Button variant={"outline"} borderRadius={"full"}>
+              {" "}
+              <FaGlobe /> Web App
+            </Button>
+            <Button variant={"outline"} borderRadius={"full"}>
+              {" "}
+              <BsCpuFill />
+              Embedded Systems
+            </Button>
+            <Button variant={"outline"} borderRadius={"full"}>
+              {" "}
+              <IoLogoGameControllerB />
+              Games
+            </Button>
+            <Button variant={"outline"} borderRadius={"full"}>
+              {" "}
+              <Ai />
+              AI
+            </Button>
+          </HStack>
+        </VStack>
         <ProjectGrid />
       </GridItem>
 
