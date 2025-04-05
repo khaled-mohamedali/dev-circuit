@@ -1,21 +1,30 @@
 import { Badge } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import { DiPostgresql } from "react-icons/di";
-import { FaAws, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
+import {
+  FaAws,
+  FaCss3Alt,
+  FaJava,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
+import { FaC, FaPhp } from "react-icons/fa6";
 import {
   SiDjango,
   SiDocker,
   SiMongodb,
+  SiMysql,
+  SiPytorch,
   SiTensorflow,
   SiTypescript,
 } from "react-icons/si";
-
+import { TbBrandCpp } from "react-icons/tb";
 export interface Experience {
   id: number;
   title: string;
   text: string;
 }
-
 export interface Project {
   id: number;
   title: string;
@@ -24,12 +33,10 @@ export interface Project {
   demo?: boolean;
   list_bagdes: Badge[];
 }
-
 interface Badge {
   name: string;
   Icon: IconType;
 }
-
 export interface Skill {
   id: number;
   component: IconType;
@@ -71,7 +78,6 @@ researchers to build scalable and
 interactive tools for data analysis.`,
   },
 ];
-
 export const projects: Project[] = [
   {
     id: 1,
@@ -139,7 +145,6 @@ export const projects: Project[] = [
     ],
   },
 ];
-
 export const colorPalette = [
   "gray",
   "red",
@@ -151,4 +156,18 @@ export const colorPalette = [
   "green",
   "yellow",
   "orange",
+];
+export const skills = [
+  { id: 1, component: FaJava },
+  { id: 2, component: FaPython },
+  { id: 3, component: FaCss3Alt },
+  { id: 4, component: SiPytorch },
+  { id: 5, component: FaC },
+  { id: 6, component: TbBrandCpp },
+  { id: 7, component: FaPhp },
+  { id: 8, component: FaReact },
+  { id: 9, component: SiTensorflow },
+  { id: 10, component: SiMysql },
+  { id: 11, component: SiMongodb },
+  { id: 11, component: SiTypescript },
 ];

@@ -4,6 +4,7 @@ import {
   GridItem,
   Heading,
   HStack,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 import { BsCpuFill } from "react-icons/bs";
@@ -14,11 +15,11 @@ import "./App.css";
 import Ai from "./components/Ai";
 import ExperienceGrid from "./components/ExperienceGrid";
 import Hero from "./components/Hero";
+import InfiniteCarousel from "./components/InfiniteCarousel";
 import Line from "./components/Line";
 import NavBar from "./components/NavBar";
 import ProjectGrid from "./components/ProjectGrid";
 import AboutMe from "./components/TextWithImage";
-import AnimatedIcons from "./components/AnimatedIcons";
 
 function App() {
   return (
@@ -70,6 +71,11 @@ function App() {
             Featured Projects
           </Heading>
           <Line width={200} color="green.500" />
+          <Text fontFamily={"Montserrat"} fontSize={"lg"}>
+            Where clean code meets innovative architecture - each project
+            represents a leap in my problem-solving abilities and technical
+            mastery
+          </Text>
           <HStack>
             <Button
               variant={"outline"}
@@ -116,7 +122,8 @@ function App() {
           </Heading>
           <Line width={200} color="cyan.400" />
         </VStack>
-        <AnimatedIcons></AnimatedIcons>
+        <InfiniteCarousel />
+        {/* Infinite scroll carousel */}
       </GridItem>
 
       {/* Contact Section */}

@@ -21,10 +21,13 @@ const ProjectCard = ({ project }: Props) => {
     >
       <Image src={project.img_url} h="200px"></Image>
       <Card.Body gap="3">
-        <Card.Title>{project.title}</Card.Title>
+        <Card.Title fontFamily={"Tektur"} fontSize={"xl"}>
+          {project.title}
+        </Card.Title>
         <Flex wrap="wrap" gap={2}>
           {project.list_bagdes.map((b) => (
             <Badge
+              fontFamily={"Montserrat"}
               key={b.name}
               colorPalette={
                 colorPalette[Math.floor(Math.random() * colorPalette.length)]
@@ -38,7 +41,7 @@ const ProjectCard = ({ project }: Props) => {
           ))}
         </Flex>
       </Card.Body>
-      <Card.Footer justifyContent="space-between">
+      <Card.Footer justifyContent="space-between" fontFamily={"Montserrat"}>
         {project.git && (
           <Button variant="ghost" borderRadius="full" size={"xs"}>
             <FaGithub /> View Source

@@ -14,10 +14,12 @@ const ExperienceCard = ({ experience }: Props) => {
           <Avatar.Image src={experienceLogo} />
           <Avatar.Fallback name="Nue Camp" />
         </Avatar.Root>
-        <Card.Title mt="2" fontSize={25} fontFamily={"Tektur"}>
+        <Card.Title mt="2" fontSize={"2xl"} fontFamily={"Tektur"}>
           {experience.title}
         </Card.Title>
-        <Card.Description>{experience.text}</Card.Description>
+        <Card.Description fontSize={"xl"} fontFamily={"Montserrat"}>
+          {experience.text}
+        </Card.Description>
       </Card.Body>
     </Card.Root>
   );

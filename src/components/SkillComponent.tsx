@@ -10,6 +10,7 @@ const SkillComponent = ({ skill }: SkillProps) => {
 
   return (
     <Badge
+      margin={2}
       colorPalette={
         colorPalette[Math.floor(Math.random() * colorPalette.length)]
       }
