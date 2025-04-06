@@ -23,8 +23,10 @@ import NavBar from "./components/NavBar";
 import ProjectGrid from "./components/ProjectGrid";
 import AboutMe from "./components/TextWithImage";
 import Footer from "./components/Footer";
+import { useColorMode } from "./components/ui/color-mode";
 
 function App() {
+  const { colorMode } = useColorMode();
   return (
     <Grid
       templateAreas={`"nav"
@@ -108,8 +110,11 @@ function App() {
               Games
             </Button>
             <Button variant={"outline"} borderRadius={"full"}>
-              {" "}
-              <Ai />
+              {colorMode == "dark" ? (
+                <Ai darkMode={true} />
+              ) : (
+                <Ai darkMode={false} />
+              )}
               AI
             </Button>
           </HStack>

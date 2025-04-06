@@ -1,14 +1,16 @@
 import { Icon } from "@chakra-ui/react";
-
-const Ai = () => {
+interface Props {
+  darkMode: boolean;
+}
+const Ai = ({ darkMode }: Props) => {
   return (
     <Icon>
       <svg
-        fill="#000000"
+        fill={darkMode ? "#ffffff" : "#000000"}
         version="1.1"
         id="Layer_1"
         viewBox="0 0 32 32"
-        stroke="#000000"
+        stroke={darkMode ? "#ffffff" : "#000000"}
         stroke-width="0.8"
       >
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
