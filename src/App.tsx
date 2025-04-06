@@ -9,11 +9,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsCpuFill } from "react-icons/bs";
-import { FaGlobe, FaPhoneSquareAlt } from "react-icons/fa";
-import { FaMapLocationDot, FaMobile } from "react-icons/fa6";
+import { FaGlobe } from "react-icons/fa";
+import { FaMobile } from "react-icons/fa6";
 import { IoLogoGameControllerB } from "react-icons/io";
 import "./App.css";
 import Ai from "./components/Ai";
+import Contact from "./components/Contact";
 import ExperienceGrid from "./components/ExperienceGrid";
 import Hero from "./components/Hero";
 import InfiniteCarousel from "./components/InfiniteCarousel";
@@ -21,9 +22,7 @@ import Line from "./components/Line";
 import NavBar from "./components/NavBar";
 import ProjectGrid from "./components/ProjectGrid";
 import AboutMe from "./components/TextWithImage";
-import { MdEmail } from "react-icons/md";
-import Form from "./components/Form";
-import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -132,19 +131,21 @@ function App() {
 
       {/* Contact Section */}
       <GridItem area="contact">
-        <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
-          {" "}
-          Get In Touch
-        </Heading>
-        <Text fontFamily={"Montserrat"} fontSize={"lg"} fontWeight={"bold"}>
-          I’d love to hear about your project ideas!
-        </Text>
+        <Box paddingBottom={20}>
+          <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
+            {" "}
+            Get In Touch
+          </Heading>
+          <Text fontFamily={"Montserrat"} fontSize={"lg"} fontWeight={"bold"}>
+            I’d love to hear about your project ideas!
+          </Text>
+        </Box>
         <Contact />
       </GridItem>
 
       {/* Footer */}
-      <GridItem area="footer" bg="gray.800" color="white">
-        Footer
+      <GridItem area="footer">
+        <Footer />
       </GridItem>
     </Grid>
   );
