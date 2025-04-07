@@ -1,4 +1,4 @@
-import { Badge, Button, Heading, HStack, Text } from "@chakra-ui/react";
+import { Badge, Heading, HStack, Text } from "@chakra-ui/react";
 import { FaRegHourglass } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { PiMagnifyingGlassPlusDuotone } from "react-icons/pi";
