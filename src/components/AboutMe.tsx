@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FaRegHourglass } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
+import { PiMagnifyingGlassPlusDuotone } from "react-icons/pi";
 
 function AboutMe() {
   return (
@@ -44,8 +45,7 @@ function AboutMe() {
         </Button>
 
         <Button variant={"plain"} bgColor={"cyan.100"} borderRadius={25}>
-          <GoProjectRoadmap size={25} />
-          25+ Projects
+          <PiMagnifyingGlassPlusDuotone /> Building Portfolio & Networking
         </Button>
       </HStack>
     </>
