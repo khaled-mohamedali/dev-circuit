@@ -21,7 +21,7 @@ import InfiniteCarousel from "./components/InfiniteCarousel";
 import Line from "./components/Line";
 import NavBar from "./components/NavBar";
 import ProjectGrid from "./components/ProjectGrid";
-import AboutMe from "./components/TextWithImage";
+import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import { useColorMode } from "./components/ui/color-mode";
 
