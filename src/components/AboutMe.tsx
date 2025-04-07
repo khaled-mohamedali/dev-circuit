@@ -1,4 +1,4 @@
-import { Button, Heading, HStack, Text } from "@chakra-ui/react";
+import { Badge, Button, Heading, HStack, Text } from "@chakra-ui/react";
 import { FaRegHourglass } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { PiMagnifyingGlassPlusDuotone } from "react-icons/pi";
@@ -22,20 +22,21 @@ function AboutMe() {
         reading about next-gen systems.
       </Text>
 
-      <HStack gap={10} justifyContent={"flex-end"}>
-        <Button variant={"plain"} bgColor={"cyan.100"} borderRadius={25}>
-          <FaRegHourglass size={25} />
+      <HStack gap={10} justifyContent={"flex-end"} marginTop={2}>
+        <Badge colorPalette={"cyan"} borderRadius={"full"} p={1} py={2}>
+          <FaRegHourglass size={20} />
           5+ Years experience
-        </Button>
+        </Badge>
 
-        <Button variant={"plain"} bgColor={"cyan.100"} borderRadius={25}>
-          <GoProjectRoadmap size={25} />
+        <Badge colorPalette={"cyan"} borderRadius={"full"} p={1} py={2}>
+          <GoProjectRoadmap size={20} />
           25+ Projects
-        </Button>
+        </Badge>
 
-        <Button variant={"plain"} bgColor={"cyan.100"} borderRadius={25}>
-          <PiMagnifyingGlassPlusDuotone /> Building Portfolio & Networking
-        </Button>
+        <Badge colorPalette={"cyan"} borderRadius={"full"} p={1} py={2}>
+          <PiMagnifyingGlassPlusDuotone size={20} /> Building Portfolio &
+          Networking
+        </Badge>
       </HStack>
     </>
   );

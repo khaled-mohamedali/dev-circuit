@@ -7,7 +7,7 @@ const ExperienceGrid = () => {
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} gap={10}>
       {experiences.map((experience) => (
-        <CardContainer>
+        <CardContainer key={experience.id}>
           <ExperienceCard
             key={experience.id}
             experience={experience}

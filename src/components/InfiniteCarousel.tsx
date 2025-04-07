@@ -29,7 +29,7 @@ const InfiniteCarousel = () => {
       >
         <HStack gap={5}>
           {[...skills, ...skills].map((skill) => (
-            <SkillComponent skill={skill}></SkillComponent>
+            <SkillComponent skill={skill} key={skill.id}></SkillComponent>
           ))}
         </HStack>
       </Box>
