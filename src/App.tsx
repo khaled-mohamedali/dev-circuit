@@ -29,14 +29,24 @@ function App() {
   const { colorMode } = useColorMode();
   return (
     <Grid
-      templateAreas={`"nav"
+      templateAreas={{
+        base: `"nav"
                   "hero"
                   "aboutme"
                   "experience"
                   "projects"
                   "skills"
                   "contact"
-                  "footer"`}
+                  "footer"`,
+        lg: `"nav"
+                "hero hero"
+                "aboutme"
+                "experience"
+                "projects"
+                "skills"
+                "contact contact"
+                "footer"`,
+      }}
       gridTemplateRows={"auto auto auto auto auto auto auto"}
       gridTemplateColumns={"1fr"}
       gap={10}
@@ -47,18 +57,15 @@ function App() {
       <GridItem area="nav">
         <NavBar />
       </GridItem>
-
       {/* Hero Section */}
       <GridItem area="hero">
         <Hero></Hero>
       </GridItem>
-
       {/* Skills Section */}
       <GridItem area="aboutme">
         <AboutMe />
       </GridItem>
-
-      {/* Experience Section */}
+      {/* Experience Section  */}
       <GridItem area="experience">
         <VStack p={5} gap={5}>
           <Heading fontFamily={"Tektur"} fontSize={"2xl"} textAlign={"center"}>
@@ -68,8 +75,7 @@ function App() {
         </VStack>
         <ExperienceGrid />
       </GridItem>
-
-      {/* Projects Section */}
+      {/* Projects Section   */}
       <GridItem area="projects">
         <VStack p={5} gap={5}>
           <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
@@ -81,7 +87,7 @@ function App() {
             represents a leap in my problem-solving abilities and technical
             mastery
           </Text>
-          <HStack>
+          <HStack flexWrap="wrap">
             <Button
               variant={"outline"}
               borderRadius={"full"}
@@ -121,8 +127,7 @@ function App() {
         </VStack>
         <ProjectGrid />
       </GridItem>
-
-      {/* Skills Section */}
+      Skills Section
       <GridItem area="skills">
         <VStack p={5} gap={5}>
           <Heading fontFamily={"Tektur"} fontSize={"2xl"} textAlign={"center"}>
@@ -131,10 +136,7 @@ function App() {
           <Line width={200} color="cyan.400" />
         </VStack>
         <InfiniteCarousel />
-        {/* Infinite scroll carousel */}
       </GridItem>
-
-      {/* Contact Section */}
       <GridItem area="contact">
         <Box paddingBottom={20}>
           <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
@@ -147,8 +149,6 @@ function App() {
         </Box>
         <Contact />
       </GridItem>
-
-      {/* Footer */}
       <GridItem area="footer">
         <Footer />
       </GridItem>

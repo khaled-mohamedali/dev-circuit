@@ -6,7 +6,7 @@ import NavLinks from "./NavLinks";
 const NavBar = () => {
   return (
     <HStack justify="space-between">
-      <Box width="150px">
+      <Box>
         <Image src={Logo}></Image>
       </Box>
       <NavLinks />

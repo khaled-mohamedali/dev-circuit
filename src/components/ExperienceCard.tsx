@@ -20,7 +20,7 @@ const ExperienceCard = ({ experience }: Props) => {
             <Avatar.Image src={experienceLogoBlack} />
           )}
 
-          <Avatar.Fallback name="Nue Camp" />
+          <Avatar.Fallback />
         </Avatar.Root>
         <Card.Title mt="2" fontSize={"2xl"} fontFamily={"Tektur"}>
           {experience.title}
