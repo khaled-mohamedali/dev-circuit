@@ -10,7 +10,7 @@ function AboutMe() {
         About me
       </Heading>
 
-      <Text fontFamily="Montserrat">
+      <Text fontFamily="Montserrat" fontSize={{ lg: "xl" }}>
         Hey, I’m Khaled 👋🏿 — a passionate developer focused on building
         innovative solutions across mobile 📱, web 🌍, and embedded systems ⚙️.
         From coding real-time microcontroller apps to experimenting with AI 🤖,

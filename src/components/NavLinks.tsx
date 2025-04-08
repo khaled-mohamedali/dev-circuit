@@ -8,8 +8,8 @@ const NavLinks = () => {
       // marginRight={{ xl: "80px" }}
     >
       <Link>Home</Link>
-      <Link>Projects</Link>
-      <Link>Contact</Link>
+      <Link href="#projects">Projects</Link>
+      <Link href="#contact">Contact</Link>
     </HStack>
   );
 };

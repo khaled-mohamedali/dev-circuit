@@ -1,4 +1,4 @@
-import { Container, HStack, Stack } from "@chakra-ui/react";
+import { Container, HStack, Link, Stack } from "@chakra-ui/react";
 import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
 import Copyright from "./Copyright";
 import { DevLogo } from "./Logo";
@@ -18,11 +18,19 @@ const Footer = () => {
           justifyContent="space-between"
           alignItems={{ base: "center" }}
         >
-          <DevLogo w={200} h={50} />
+          <Link href="#">
+            <DevLogo w={200} h={50} />
+          </Link>
           <HStack>
-            <FaFacebookSquare size={30} />
-            <FaGithub size={30} />
-            <FaLinkedin size={30} />
+            <Link href="https://www.facebook.com/khaledmohamed.ali.52/">
+              <FaFacebookSquare size={30} />
+            </Link>
+            <Link href="https://github.com/khaled-mohamedali">
+              <FaGithub size={30} />
+            </Link>
+            <Link href="https://www.linkedin.com/in/khaledmohamedali/">
+              <FaLinkedin size={30} />
+            </Link>
           </HStack>
         </Stack>
       </Stack>

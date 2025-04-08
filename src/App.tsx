@@ -77,55 +77,57 @@ function App() {
       </GridItem>
       {/* Projects Section   */}
       <GridItem area="projects">
-        <VStack p={5} gap={5}>
-          <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
-            Featured Projects
-          </Heading>
-          <Line width={200} color="green.500" />
-          <Text fontFamily={"Montserrat"} fontSize={"lg"}>
-            Where clean code meets innovative architecture - each project
-            represents a leap in my problem-solving abilities and technical
-            mastery
-          </Text>
-          <HStack flexWrap="wrap">
-            <Button
-              variant={"outline"}
-              borderRadius={"full"}
-              colorPalette={"green"}
-            >
-              {" "}
-              All Projects
-            </Button>
-            <Button variant={"outline"} borderRadius={"full"}>
-              {" "}
-              <FaMobile />
-              Mobile App
-            </Button>
-            <Button variant={"outline"} borderRadius={"full"}>
-              {" "}
-              <FaGlobe /> Web App
-            </Button>
-            <Button variant={"outline"} borderRadius={"full"}>
-              {" "}
-              <BsCpuFill />
-              Embedded Systems
-            </Button>
-            <Button variant={"outline"} borderRadius={"full"}>
-              {" "}
-              <IoLogoGameControllerB />
-              Games
-            </Button>
-            <Button variant={"outline"} borderRadius={"full"}>
-              {colorMode == "dark" ? (
-                <Ai darkMode={true} />
-              ) : (
-                <Ai darkMode={false} />
-              )}
-              AI
-            </Button>
-          </HStack>
-        </VStack>
-        <ProjectGrid />
+        <Box id="projects">
+          <VStack p={5} gap={5}>
+            <Heading fontFamily={"Tektur"} fontSize={"2xl"}>
+              Featured Projects
+            </Heading>
+            <Line width={200} color="green.500" />
+            <Text fontFamily={"Montserrat"} fontSize={"lg"}>
+              Where clean code meets innovative architecture - each project
+              represents a leap in my problem-solving abilities and technical
+              mastery
+            </Text>
+            <HStack flexWrap="wrap">
+              <Button
+                variant={"outline"}
+                borderRadius={"full"}
+                colorPalette={"green"}
+              >
+                {" "}
+                All Projects
+              </Button>
+              <Button variant={"outline"} borderRadius={"full"}>
+                {" "}
+                <FaMobile />
+                Mobile App
+              </Button>
+              <Button variant={"outline"} borderRadius={"full"}>
+                {" "}
+                <FaGlobe /> Web App
+              </Button>
+              <Button variant={"outline"} borderRadius={"full"}>
+                {" "}
+                <BsCpuFill />
+                Embedded Systems
+              </Button>
+              <Button variant={"outline"} borderRadius={"full"}>
+                {" "}
+                <IoLogoGameControllerB />
+                Games
+              </Button>
+              <Button variant={"outline"} borderRadius={"full"}>
+                {colorMode == "dark" ? (
+                  <Ai darkMode={true} />
+                ) : (
+                  <Ai darkMode={false} />
+                )}
+                AI
+              </Button>
+            </HStack>
+          </VStack>
+          <ProjectGrid />
+        </Box>
       </GridItem>
       {/* Skills Section */}
       <GridItem area="skills">
@@ -147,7 +149,9 @@ function App() {
             I’d love to hear about your project ideas!
           </Text>
         </Box>
-        <Contact />
+        <Box id="contact">
+          <Contact />
+        </Box>
       </GridItem>
       <GridItem area="footer">
         <Footer />
