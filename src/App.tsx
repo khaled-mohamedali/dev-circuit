@@ -127,7 +127,7 @@ function App() {
         </VStack>
         <ProjectGrid />
       </GridItem>
-      Skills Section
+      {/* Skills Section */}
       <GridItem area="skills">
         <VStack p={5} gap={5}>
           <Heading fontFamily={"Tektur"} fontSize={"2xl"} textAlign={"center"}>
