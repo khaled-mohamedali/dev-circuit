@@ -8,24 +8,22 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { BsCpuFill } from "react-icons/bs";
-import { FaGlobe } from "react-icons/fa";
-import { FaMobile } from "react-icons/fa6";
-import { IoLogoGameControllerB } from "react-icons/io";
+import { useState } from "react";
 import "./App.css";
-import Ai from "./components/Ai";
+import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import ExperienceGrid from "./components/ExperienceGrid";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import InfiniteCarousel from "./components/InfiniteCarousel";
 import Line from "./components/Line";
 import NavBar from "./components/NavBar";
 import ProjectGrid from "./components/ProjectGrid";
-import AboutMe from "./components/AboutMe";
-import Footer from "./components/Footer";
 import { useColorMode } from "./components/ui/color-mode";
+import { buttons } from "./hooks/data";
 
 function App() {
+  const [type, setType] = useState("");
   const { colorMode } = useColorMode();
   return (
     <Grid
@@ -89,44 +87,27 @@ function App() {
               mastery
             </Text>
             <HStack flexWrap="wrap">
-              <Button
-                variant={"outline"}
-                borderRadius={"full"}
-                colorPalette={"green"}
-              >
-                {" "}
-                All Projects
-              </Button>
-              <Button variant={"outline"} borderRadius={"full"}>
-                {" "}
-                <FaMobile />
-                Mobile App
-              </Button>
-              <Button variant={"outline"} borderRadius={"full"}>
-                {" "}
-                <FaGlobe /> Web App
-              </Button>
-              <Button variant={"outline"} borderRadius={"full"}>
-                {" "}
-                <BsCpuFill />
-                Embedded Systems
-              </Button>
-              <Button variant={"outline"} borderRadius={"full"}>
-                {" "}
-                <IoLogoGameControllerB />
-                Games
-              </Button>
-              <Button variant={"outline"} borderRadius={"full"}>
-                {colorMode == "dark" ? (
-                  <Ai darkMode={true} />
-                ) : (
-                  <Ai darkMode={false} />
-                )}
-                AI
-              </Button>
+              {buttons.map((button) => (
+                <Button
+                  variant={"outline"}
+                  borderRadius={"full"}
+                  onClick={() => setType(button.type)}
+                >
+                  {button.iconRender ? (
+                    colorMode == "dark" ? (
+                      <button.iconRender darkMode={true} />
+                    ) : (
+                      <button.iconRender darkMode={false} />
+                    )
+                  ) : (
+                    button.icon && <button.icon />
+                  )}
+                  {button.label}
+                </Button>
+              ))}
             </HStack>
           </VStack>
-          <ProjectGrid />
+          <ProjectGrid type={type} />
         </Box>
       </GridItem>
       {/* Skills Section */}
