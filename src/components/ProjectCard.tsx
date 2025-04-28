@@ -1,5 +1,5 @@
 import { Project } from "@/hooks/data";
-import { Badge, Button, Card, Flex, Image } from "@chakra-ui/react";
+import { Badge, Button, Card, Flex, Image, Link } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa6";
 import { colorPalette } from "@/hooks/data";
@@ -44,7 +44,10 @@ const ProjectCard = ({ project }: Props) => {
       <Card.Footer justifyContent="space-between" fontFamily={"Montserrat"}>
         {project.git && (
           <Button variant="ghost" borderRadius="full" size={"xs"}>
-            <FaGithub /> View Source
+            <Link href={project.git} variant={"plain"}>
+              {" "}
+              <FaGithub /> View Source{" "}
+            </Link>
           </Button>
         )}
         {project.demo && (
@@ -54,8 +57,10 @@ const ProjectCard = ({ project }: Props) => {
             size={"xs"}
             colorPalette={"cyan"}
           >
-            <FaGlobe />
-            Demo
+            <Link href={project.demo} variant={"plain"}>
+              {" "}
+              <FaGlobe /> Demo{" "}
+            </Link>
           </Button>
         )}
       </Card.Footer>

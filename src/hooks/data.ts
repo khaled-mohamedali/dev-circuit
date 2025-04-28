@@ -5,22 +5,38 @@ import { DiPostgresql } from "react-icons/di";
 import {
   FaAws,
   FaCss3Alt,
+  FaDesktop,
   FaJava,
   FaNodeJs,
   FaPython,
   FaReact,
 } from "react-icons/fa";
-import { FaC, FaGlobe, FaMobile, FaPhp } from "react-icons/fa6";
+import {
+  FaAndroid,
+  FaC,
+  FaCss3,
+  FaGlobe,
+  FaHtml5,
+  FaJs,
+  FaMobile,
+  FaPhp,
+} from "react-icons/fa6";
 import { IoLogoGameControllerB } from "react-icons/io";
 import {
+  SiAndroid,
   SiDjango,
   SiDocker,
+  SiFirebase,
+  SiGamemaker,
   SiMongodb,
   SiMysql,
   SiPytorch,
   SiTensorflow,
   SiTypescript,
 } from "react-icons/si";
+import img_1 from "../assets/projects_images/princess_hero.png";
+import img_2 from "../assets/projects_images/game-hub.png";
+import img_3 from "../assets/projects_images/lafiya_care.jpeg";
 
 import Ai from "@/components/Ai";
 import { TbBrandCpp } from "react-icons/tb";
@@ -33,8 +49,8 @@ export interface Project {
   id: number;
   title: string;
   img_url: string;
-  git: boolean;
-  demo?: boolean;
+  git: string;
+  demo?: string;
   type: string;
   list_bagdes: Badge[];
 }
@@ -86,71 +102,42 @@ interactive tools for data analysis.`,
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    img_url: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a",
-    git: true,
-    demo: true,
-    type: "mobile",
+    title: "Princess Hero",
+    img_url: img_1,
+    git: "https://github.com/khaled-mohamedali/Princesse_hero",
+    type: "game",
     list_bagdes: [
-      { name: "React", Icon: FaReact },
-      { name: "Node.js", Icon: FaNodeJs },
-      { name: "MongoDB", Icon: SiMongodb },
-      { name: "AWS", Icon: FaAws },
-      { name: "Python", Icon: FaPython },
-      { name: "TensorFlow", Icon: SiTensorflow },
-      { name: "Docker", Icon: SiDocker },
+      { name: "Game Maker", Icon: SiGamemaker },
+      { name: "Physics", Icon: FaReact },
+      { name: "Destop", Icon: FaDesktop },
     ],
   },
   {
     id: 2,
-    title: "AI Research Dashboard",
-    img_url: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485",
-    git: false,
-    demo: true,
+    title: "Game Hub",
+    img_url: img_2,
+    git: "https://github.com/khaled-mohamedali/game-hub",
+    demo: "https://game-hub-rho-vert.vercel.app/",
     type: "web",
     list_bagdes: [
-      { name: "Python", Icon: FaPython },
-      { name: "TensorFlow", Icon: SiTensorflow },
-      { name: "Docker", Icon: SiDocker },
+      { name: "React", Icon: FaReact },
+      { name: "Java", Icon: FaJava },
+      { name: "HMTL", Icon: FaHtml5 },
+      { name: "CSS", Icon: FaCss3 },
+      { name: "JS", Icon: FaJs },
     ],
   },
   {
     id: 3,
-    title: "Social Media Analytics",
-    img_url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    git: true,
-    demo: false,
-    type: "game",
-    list_bagdes: [
-      { name: "TypeScript", Icon: SiTypescript },
-      { name: "Django", Icon: SiDjango },
-      { name: "PostgreSQL", Icon: DiPostgresql },
-    ],
-  },
-  {
-    id: 4,
-    title: "IoT Monitoring System",
-    img_url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-    git: false,
-    type: "embedded",
-    list_bagdes: [
-      { name: "React", Icon: FaReact },
-      { name: "Node.js", Icon: FaNodeJs },
-      { name: "Python", Icon: FaPython },
-      { name: "Docker", Icon: SiDocker },
-    ],
-  },
-  {
-    id: 5,
-    title: "IoT Monitoring System",
-    img_url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-    git: true,
+    title: "Lafiya Care",
+    img_url: img_3,
+    git: "https://github.com/khaled-mohamedali/Lafiya_Care/",
+    demo: "",
     type: "mobile",
     list_bagdes: [
-      { name: "React", Icon: FaReact },
-      { name: "Node.js", Icon: FaNodeJs },
-      { name: "Python", Icon: FaPython },
-      { name: "Docker", Icon: SiDocker },
+      { name: "Java", Icon: FaJava },
+      { name: "FireBase", Icon: SiFirebase },
+      { name: "Android", Icon: SiAndroid },
     ],
   },
 ];
