@@ -1,18 +1,14 @@
 import { Badge } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import { BsCpuFill } from "react-icons/bs";
-import { DiPostgresql } from "react-icons/di";
 import {
-  FaAws,
   FaCss3Alt,
   FaDesktop,
   FaJava,
-  FaNodeJs,
   FaPython,
   FaReact,
 } from "react-icons/fa";
 import {
-  FaAndroid,
   FaC,
   FaCss3,
   FaGlobe,
@@ -24,8 +20,6 @@ import {
 import { IoLogoGameControllerB } from "react-icons/io";
 import {
   SiAndroid,
-  SiDjango,
-  SiDocker,
   SiFirebase,
   SiGamemaker,
   SiMongodb,
@@ -34,9 +28,9 @@ import {
   SiTensorflow,
   SiTypescript,
 } from "react-icons/si";
-import img_1 from "../assets/projects_images/princess_hero.png";
 import img_2 from "../assets/projects_images/game-hub.png";
 import img_3 from "../assets/projects_images/lafiya_care.jpeg";
+import img_1 from "../assets/projects_images/princess_hero.png";
 
 import Ai from "@/components/Ai";
 import { TbBrandCpp } from "react-icons/tb";
